@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Inicio from '../views/Inicio.vue'
 import Curso from '../views/Curso.vue'
 import Home from '../views/Home.vue'
 
@@ -8,11 +7,6 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
-    {
-      path: '/home',
-      name: 'home',
-      component: Home,
-    },
     {
       path: '/',
       name: 'inicio',
@@ -32,6 +26,14 @@ const router = new VueRouter({
         name: 'tema1',
       },
       children: [
+        {
+          path: 'sintesis',
+          name: 'sintesis',
+          component: () =>
+            import(
+              /* webpackChunkName: "sintesis" */ '../views/curso/Sintesis.vue'
+            ),
+        },
         {
           path: 'tema1',
           name: 'tema1',
@@ -53,30 +55,10 @@ const router = new VueRouter({
       ],
     },
     {
-      path: '/actividad/:index?',
-      name: 'actividad',
-      // component: () =>
-      //   import(/* webpackChunkName: "actividad" */ '../views/Actividad.vue'),
-    },
-    {
-      path: '/actividad-didactica',
-      name: 'actividadDidactica',
-      component: () =>
-        import(
-          /* webpackChunkName: "actividad" */ '../views/ActividadDidactica.vue'
-        ),
-    },
-    {
       path: '/glosario',
       name: 'glosario',
       component: () =>
         import(/* webpackChunkName: "glosario" */ '../views/Glosario.vue'),
-    },
-    {
-      path: '/complementario',
-      name: 'complementario',
-      component: () =>
-        import(/* webpackChunkName: "comple" */ '../views/Complementario.vue'),
     },
     {
       path: '/referencias',
@@ -85,12 +67,6 @@ const router = new VueRouter({
         import(
           /* webpackChunkName: "referencias" */ '../views/Referencias.vue'
         ),
-    },
-    {
-      path: '/sintesis',
-      name: 'sintesis',
-      component: () =>
-        import(/* webpackChunkName: "sintesis" */ '../views/Sintesis.vue'),
     },
   ],
   scrollBehavior(to, from) {

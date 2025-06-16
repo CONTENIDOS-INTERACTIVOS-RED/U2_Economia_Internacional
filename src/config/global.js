@@ -1,77 +1,40 @@
 export default {
   global: {
-    componenteFormativo:
-      'Componente Formativo con un nombre extremadamente largo y extenso',
-    descripcionCurso:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis vestibulum quam bibendum varius.<br/><br/>Quisque pretium at nulla sit amet placerat. Vestibulum consequat suscipit accumsan. Proin pharetra congue enim et tempus. Sed sodales dui volutpat, placerat tellus accumsan, semper est. Phasellus nec lorem elementum, mattis quam eget, vestibulum nibh. Sed.',
-    imagenBannerPrincipal: require('@/assets/curso/banner-princiapal.svg'),
-    fondoBannerPrincipal: require('@/assets/curso/fondo-banner-principal.png'),
-    imagenesDecorativasBanner: [
-      {
-        clases: ['banner-principal-decorativo-1', 'd-none', 'd-lg-block'],
-        imagen: require('@/assets/curso/banner-principal-decorativo-1.svg'),
-      },
-      {
-        clases: ['banner-principal-decorativo-2'],
-        imagen: require('@/assets/curso/banner-principal-decorativo-2.svg'),
-      },
-    ],
+    numeroUnidad: '2',
+    tituloUnidad: 'Políticas comerciales y acuerdos internacionales',
   },
   menuPrincipal: {
     menu: [
-      // {
-      //   nombreRuta: 'inicio',
-      //   icono: 'fas fa-home',
-      //   titulo: 'Volver al inici',
-      // },
-      // {
-      //   nombreRuta: 'introduccion',
-      //   icono: 'fas fa-info-circle',
-      //   titulo: 'Introducció',
-      //   desarrolloContenidos: true,
-      // },
+      {
+        nombreRuta: 'introduccion',
+        icono: 'fas fa-info-circle',
+        titulo: 'Introducción',
+        desarrolloContenidos: true,
+      },
       {
         nombreRuta: 'tema1',
         icono: 'far fa-file-alt',
         numero: '1',
-        titulo: 'Unidad',
+        titulo: 'Teorías y estrategias de política comercial',
         desarrolloContenidos: true,
         subMenu: [
           {
             icono: 'far fa-file-alt',
             numero: '1.1',
-            titulo: 'Título de segundo nivel',
+            titulo: 'Concepto e importancia de la política comercial',
             hash: 't_1_1',
           },
           {
             icono: 'far fa-file-alt',
             numero: '1.2',
-            titulo: 'Acordeón',
+            titulo: 'Teorías de la política comercial',
             hash: 't_1_2',
           },
           {
             icono: 'far fa-file-alt',
             numero: '1.3',
-            titulo: 'Slider',
+            titulo: 'Instrumentos de la política comercial internacional',
             hash: 't_1_3',
-          },
-          {
-            icono: 'far fa-file-alt',
-            numero: '1.4',
-            titulo: 'Pestañas',
-            hash: 't_1_4',
-          },
-          {
-            icono: 'far fa-file-alt',
-            numero: '1.5',
-            titulo: 'Infografia interactiva',
-            hash: 't_1_5',
-          },
-          {
-            icono: 'far fa-file-alt',
-            numero: '1.6',
-            titulo: 'Infografia interactiva',
-            hash: 't_1_6',
           },
         ],
       },
@@ -79,38 +42,20 @@ export default {
         nombreRuta: 'tema2',
         icono: 'far fa-file-alt',
         numero: '2',
-        titulo: 'Unidad',
+        titulo: 'Acuerdos y tratados internacionales',
         desarrolloContenidos: true,
         subMenu: [
           {
             icono: 'far fa-file-alt',
             numero: '2.1',
-            titulo: 'Texto destacado',
+            titulo: 'Tipos de acuerdos comerciales',
             hash: 't_2_1',
           },
           {
             icono: 'far fa-file-alt',
             numero: '2.2',
-            titulo: 'Llamado a la acción - Recursos externos',
+            titulo: 'Impacto de los tratados comerciales en la economía global',
             hash: 't_2_2',
-          },
-          {
-            icono: 'far fa-file-alt',
-            numero: '2.3',
-            titulo: 'Audios',
-            hash: 't_2_3',
-          },
-          {
-            icono: 'far fa-file-alt',
-            numero: '2.4',
-            titulo: 'Listado',
-            hash: 't_2_4',
-          },
-          {
-            icono: 'far fa-file-alt',
-            numero: '2.5',
-            titulo: 'Línea de tiempo',
-            hash: 't_2_5',
           },
         ],
       },
@@ -118,22 +63,27 @@ export default {
         nombreRuta: 'tema3',
         icono: 'far fa-file-alt',
         numero: '3',
-        titulo: 'Unidad',
+        titulo: 'Retos y oportunidades de la política comercial internacional',
         desarrolloContenidos: true,
         subMenu: [
           {
             icono: 'far fa-file-alt',
             numero: '3.1',
-            titulo: 'Carrusel',
+            titulo: 'Principales retos de la política comercial',
             hash: 't_3_1',
           },
           {
             icono: 'far fa-file-alt',
             numero: '3.2',
-            titulo: 'Tablas',
+            titulo: 'Oportunidades para la integración económica',
             hash: 't_3_2',
           },
         ],
+      },
+      {
+        nombreRuta: 'sintesis',
+        titulo: 'Síntesis',
+        desarrolloContenidos: true,
       },
     ],
     subMenu: [
@@ -159,251 +109,129 @@ export default {
         nombreRuta: 'referencias',
       },
       {
-        icono: 'fas fa-file-download',
-        titulo: 'Descargar PDF',
-        download: 'downloads/material.zip',
-      },
-      {
         icono: 'fas fa-download',
         titulo: 'Descargar material',
         download: 'downloads/material.zip',
-      },
-      {
-        icono: 'far fa-registered',
-        titulo: 'Síntesis',
-        nombreRuta: 'sintesis',
       },
     ],
   },
   referencias: [
     {
       referencia:
-        'Zlackman, C. (2012). 100 años de moda. Sistema de Bibliotecas SENA:',
-      link:
-        'https://sena-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=sena_aleph000060086&vid=SENA&search_scope=sena_completo&tab=sena_completo&lang=es_ES&context=L',
+        'Tosoni, G.A. & Sanchium, T-B. (2023). Hacia una política comercial inclusiva para América Latina en la pospandemia. Problemas del Desarrollo. Revista Latinoamericana de Economía , 54(214), 23-47.  ',
+      link: 'https://doi.org/10.22201/iiec.20078951e.2023.214.69996',
     },
     {
       referencia:
-        'Castellanos, O., Fumeque A., y Ramirez D. (2011). Análisis de tendencias: de la información hacia la innovación. Universidad Nacional de Colombia. Sistema de Bibliotecas SENA:',
-      link:
-        'https://sena-primo.hosted.exlibrisgroup.com/permalink/f/1j5choe/sena_aleph000007947',
+        'Casanova Montero, A. R. & Zuaznábar Morales, I. R. (2018). El comercio internacional: teorías y políticas. Editorial Universo Sur.  ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/120836',
     },
     {
       referencia:
-        '<em>Harpersbazaar</em>. (2019). La ropa que eliges afecta a tu estado de ánimo y cerebro, según expertos. En arpersbazaar.mx.',
+        'Granato, L. (2010). Protección del inversor extranjero y arbitraje internacional en los Tratados Bilaterales de Inversión. CAEI - Centro argentino de estudios internacionales.  ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/27248',
     },
     {
       referencia:
-        'Lafuente M., Navarro J., y Navarro J. (2005). Ilustración de moda. Sistema de Bibliotecas SENA',
-      link:
-        'https://sena-primo.hosted.exlibrisgroup.com/permalink/f/1j5choe/sena_aleph000025549',
+        'Moscoso Cuaresma, R. (Il.), Acosta Mantaro, J. (Il.) & Pardavé Aquino, R. (Il.). (2021). Integración económica: estrategias peruanas para la internacionalización. Universidad Peruana de Ciencias Aplicadas (UPC).   ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/201829',
     },
     {
       referencia:
-        'Laver, J.,  Albizua, H., y Fortea, B. (1990). Breve historia del traje y la moda. Sistema de Bibliotecas SENA.',
+        'Zaelke, D. (2002). Comercio internacional y medio ambiente: derecho, economía y política. Espacio Editorial.  ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/118509',
     },
     {
       referencia:
-        'Navarro, J.,  y Lafuente, M. (2010). Ilustración de moda: dibujo plano. Sistema de Bibliotecas SENA:',
-      link:
-        'https://sena-primo.hosted.exlibrisgroup.com/permalink/f/q6j6k0/sena_aleph000023241',
-    },
-    {
-      referencia:
-        'Áciedad Americana de Ensayos y Materiales (ASTM). (2003). Textiles. Editorial Staff. [Book]. Sistema de Bibliotecas SENA.',
-      link:
-        'https://sena-primo.hosted.exlibrisgroup.com/permalink/f/1j5choe/sena_aleph000051551',
-    },
-    {
-      referencia:
-        'Szkutnicka, B., Cuenca, C., Koyama, A. (2010). El dibujo técnico de moda paso a paso. Sistema de Bibliotecas SENA.',
-      link:
-        'https://sena-primo.hosted.exlibrisgroup.com/permalink/f/1j5choe/sena_aleph000057728',
+        'Reza, G. A. D. L. (2006). Integración económica en América Latina: hacia una comunidad regional en el siglo XXI. Plaza y Valdés (México). ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/36712 ',
     },
   ],
   glosario: [
     {
-      termino: 'MoodBoard',
+      termino: 'Apertura comercial',
       significado:
-        'su traducción literal es mapa de inspiración y aunque su uso está muy asociado al ámbito de la decoración de interiores o la moda, <br/>realmente se utiliza en entornos creativos muy diversos, desde el diseño de productos o servicios al audiovisual o el diseño gráfico.',
+        'Reducción de barreras al comercio, para fomentar la integración de mercados y mejorar la competitividad económica.',
     },
     {
-      termino: '<em>Suftware</em>',
+      termino: 'Barreras no arancelarias',
       significado:
-        'término informático que hace referencia a un programa o conjunto de programas de cómputo, así como datos, procedimientos y pautas que permiten realizar distintas tareas en un sistema informático.',
+        'Regulaciones que limitan el comercio sin aplicar impuestos, como normas técnicas, sanitarias o restricciones cuantitativas.',
     },
     {
-      termino: 'Pirognóstico',
+      termino: 'Comercio estratégico',
       significado:
-        'ensayo sin componentes reactivos, quiere decir, reconocimiento de los componentes, mediante la aplicación adecuada del fuego.',
+        'Teoría que sugiere la intervención del Estado para fortalecer industrias claves en mercados globales competitivos.',
     },
     {
-      termino: '<em>Áectores</em>',
+      termino: 'Competencia desleal',
       significado:
-        'en software de diseño, son líneas que se crean y permiten, expandir, modificar, al tamaño que sea sin pixelarse porque se unen por coordenadas matemáticas del programa y no se generan por números fijos.',
+        'Prácticas comerciales que otorgan ventajas injustas, como subsidios excesivos o <em>dumping</em>.',
     },
     {
-      termino: 'Moda',
+      termino: 'Cuotas de importación',
       significado:
-        'hábito repetitivo que identifica a una persona, una especie de presión social, que debe consumir, utilizar o hacer.',
+        'Límite a la cantidad de un producto extranjero que puede ingresar a un país, en un período determinado.',
     },
     {
-      termino: 'Diseña',
+      termino: 'Diplomacia económica',
       significado:
-        'actividad creativa orientada a soluciones idóneas a ciertas problemáticas.',
+        'Uso de la política comercial para establecer relaciones internacionales y negociar acuerdos favorables.',
     },
     {
-      termino: 'DIseño',
+      termino: 'Industria naciente',
       significado:
-        'actividad creativa orientada a soluciones idóneas a ciertas problemáticas.',
+        'Sectores emergentes que requieren protección estatal, para consolidarse, antes de competir a nivel global.',
     },
     {
-      termino: 'Tipología',
+      termino: 'Integración económica',
       significado:
-        'estudio de los tipos o modelos que se usan para clasificar en diversas ciencias o disciplinas.',
+        'Proceso en el que los países eliminan barreras comerciales y coordinan políticas económicas.',
     },
     {
-      termino: 'Bidimensional',
+      termino: 'Interdependencia comercial',
       significado:
-        'que se representa según su altura y su anchura y no su profundidad.',
+        'Relación económica en la que los países dependen mutuamente para el suministro de bienes y servicios.',
     },
     {
-      termino: 'Interés Inferior del menor',
+      termino: 'Medidas de retorsión',
       significado:
-        'término informático que hace referencia a un programa o conjunto de programas de cómputo, así como datos, procedimientos y pautas que permiten realizar distintas tareas en un sistema informático.',
+        'Acciones comerciales impuestas en respuesta a barreras o restricciones, impuestas por otros países.',
     },
     {
-      termino: 'Interseccionalidad',
+      termino: 'Mercado común',
       significado:
-        'término informático que hace referencia a un programa o conjunto de programas de cómputo, así como datos, procedimientos y pautas que permiten realizar distintas tareas en un sistema informático.',
+        'Tipo de integración económica que permite libre circulación de bienes, servicios, capitales y personas, entre países miembros.',
     },
     {
-      termino: 'Interés superior del menor',
+      termino: 'Normas técnicas',
       significado:
-        'término informático que hace referencia a un programa o conjunto de programas de cómputo, así como datos, procedimientos y pautas que permiten realizar distintas tareas en un sistema informático.',
+        'Regulaciones que establecen estándares de calidad, seguridad y desempeño, para bienes y servicios.',
+    },
+    {
+      termino: 'Política industrial',
+      significado:
+        'Estrategia gubernamental para fomentar el desarrollo y la competitividad, de sectores productivos estratégicos.',
+    },
+    {
+      termino: 'Reglas de origen',
+      significado:
+        'Criterios que determinan el país de procedencia de un producto, para aplicar tratados comerciales.',
+    },
+    {
+      termino: 'Salvaguardias comerciales',
+      significado:
+        'Medidas temporales para restringir importaciones y proteger a las industrias nacionales, de crisis comerciales.',
+    },
+    {
+      termino: 'Sustitución de importaciones',
+      significado:
+        'Estrategia para reducir la dependencia de bienes extranjeros, mediante la producción nacional.',
+    },
+    {
+      termino: 'Unión aduanera',
+      significado:
+        'Integración comercial donde los países eliminan barreras internas y adoptan políticas arancelarias comunes, frente a terceros.',
     },
   ],
-  complementario: [
-    {
-      tema: 'Estrategias para la segmentación de mercados',
-      referencia:
-        'Cámara de Comercio de Medellín. (2020). <em>Suftware</em> Tendencias de negocios - Mercadeo y ventas',
-      tipo: 'Video',
-      link: 'https://www.google.com/',
-    },
-    {
-      tema: 'Estrategias para la segmentación de mercados',
-      referencia:
-        'Cámara de Comercio de Medellín. (2020). <em>Suftware</em> Tendencias de negocios - Mercadeo y ventas',
-      tipo: 'Video',
-      link: 'https://www.google.com/',
-    },
-    {
-      tema: 'Estrategias para la segmentación de mercados',
-      referencia:
-        'Cámara de Comercio de Medellín. (2020). <em>Suftware</em> Tendencias de negocios - Mercadeo y ventas',
-      tipo: 'Video',
-      link: 'https://www.google.com/',
-    },
-  ],
-  creditos: [
-    {
-      titulo: 'ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Maria Camila Garcia Santamaria',
-          cargo: 'Líder del equipo',
-          centro: 'Dirección General',
-        },
-      ],
-    },
-    {
-      titulo: 'CONTENIDO INSTRUCCIONAL',
-      autores: [
-        {
-          nombre: 'Rafael Neftalí Lizcano Reyes',
-          cargo: 'Asesor metodológico y pedagógico',
-          centro:
-            'Centro Industrial del Diseño y la Manufactura Regional Santander',
-        },
-      ],
-    },
-    {
-      titulo: 'DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Francisco José Lizcano Reyes',
-          cargo: 'Responsable del equipo',
-          centro:
-            'Centro Industrial del Diseño y la Manufactura Regional Santander',
-        },
-        {
-          nombre: 'Leyson Fabian Castaño Perez',
-          cargo: 'Soporte organizacional',
-          centro: 'Centro de Comercio y Servicios Regional Tolima',
-        },
-        {
-          nombre: ['Nombre 1', 'Nombre 2'],
-          cargo: 'Diseño web',
-          centro:
-            'Centro Industrial del Diseño y la Manufactura Regional Santander',
-        },
-        {
-          nombre: 'Nombre',
-          cargo: 'Desarrollo Front-End',
-          centro:
-            'Centro Industrial del Diseño y la Manufactura Regional Santander',
-        },
-        {
-          nombre: 'Nombre',
-          cargo: 'Producción audiovisual',
-          centro:
-            'Centro Industrial del Diseño y la Manufactura Regional Santander',
-        },
-        {
-          nombre: 'Nombre',
-          cargo: 'Validación de diseño y contenido',
-          centro:
-            'Centro Industrial del Diseño y la Manufactura Regional Santander',
-        },
-      ],
-    },
-    {
-      titulo: 'GESTORES DE REPOSITORIO',
-      autores: [
-        {
-          nombre: 'Milady Tatiana Villamil Castellanos',
-          cargo: 'Validación y vinculación en plataforma LMS',
-          centro: 'Centro de Comercio y Servicios Regional Tolima',
-        },
-      ],
-    },
-  ],
-  creditosAdicionales: {
-    imagenes:
-      'Fotografías y vectores tomados de <a href="https://www.freepik.es/" target="_blank">www.freepik.es</a>, <a href="https://www.shutterstock.com/" target="_blank">www.shutterstock.com</a>, <a href="https://unsplash.com/" target="_blank">unsplash.com </a>y <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>',
-    creativeCommons:
-      'Licencia creative commons CC BY-NC-SA<br><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">ver licencia</a>',
-  },
-  // creditosInicio: [
-  //   {
-  //     titulo: 'En alianza',
-  //     contenido: [
-  //       require('@/assets/template/logo-sena-naranja.svg'),
-  //       require('@/assets/template/mintic.jpg'),
-  //       require('@/assets/template/minsalud.jpg'),
-  //     ],
-  //   },
-  //   {
-  //     titulo: 'En compañía',
-  //     contenido: [
-  //       require('@/assets/template/presidencia.jpg'),
-  //       require('@/assets/template/ecopetrol.jpg'),
-  //     ],
-  //   },
-  //   {
-  //     titulo: 'Una iniciativa',
-  //     contenido: [require('@/assets/template/santander.jpg')],
-  //   },
-  // ],
 }
